@@ -10,6 +10,8 @@
 		DB27751527ED4B0C004B64E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB27751427ED4B0C004B64E8 /* GoogleService-Info.plist */; };
 		DB27751F27ED6510004B64E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB27751E27ED6510004B64E8 /* FirebaseAuth */; };
 		DB27752127ED6510004B64E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB27752027ED6510004B64E8 /* FirebaseFirestore */; };
+		DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */; };
+		DB27752627ED9F62004B64E8 /* RecipeRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */; };
 		DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FB27DC214000F07475 /* AppDelegate.swift */; };
 		DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FD27DC214000F07475 /* SceneDelegate.swift */; };
 		DB32350027DC214000F07475 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FF27DC214000F07475 /* EntryController.swift */; };
@@ -22,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		DB27751427ED4B0C004B64E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoriesViewController.swift; sourceTree = "<group>"; };
+		DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRetriever.swift; sourceTree = "<group>"; };
 		DB3234F827DC214000F07475 /* SoupsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoupsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3234FB27DC214000F07475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3234FD27DC214000F07475 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -47,9 +51,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB27752427ED9ECF004B64E8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		DB3234EF27DC214000F07475 = {
 			isa = PBXGroup;
 			children = (
+				DB27752427ED9ECF004B64E8 /* Networking */,
 				DB3234FA27DC214000F07475 /* SoupsOn */,
 				DB3234F927DC214000F07475 /* Products */,
 			);
@@ -76,6 +89,7 @@
 				DB27751427ED4B0C004B64E8 /* GoogleService-Info.plist */,
 				DB32350F27DC632000F07475 /* LoginViewController.swift */,
 				DB32351127DC633300F07475 /* SignupViewController.swift */,
+				DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */,
 			);
 			path = SoupsOn;
 			sourceTree = "<group>";
@@ -159,8 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB27752627ED9F62004B64E8 /* RecipeRetriever.swift in Sources */,
 				DB32351027DC632000F07475 /* LoginViewController.swift in Sources */,
 				DB32350027DC214000F07475 /* EntryController.swift in Sources */,
+				DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */,
 				DB32351227DC633300F07475 /* SignupViewController.swift in Sources */,
 				DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */,
 				DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */,

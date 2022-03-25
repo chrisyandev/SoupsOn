@@ -228,6 +228,9 @@
                                                 <integer key="value" value="25"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <segue destination="5RB-US-reJ" kind="show" id="EpN-Il-Iuk"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -318,7 +321,7 @@
         <!--Recipe Categories Controller-->
         <scene sceneID="BZ2-hS-CI9">
             <objects>
-                <viewController id="5RB-US-reJ" userLabel="Recipe Categories Controller" sceneMemberID="viewController">
+                <viewController id="5RB-US-reJ" userLabel="Recipe Categories Controller" customClass="RecipeCategoriesViewController" customModule="SoupsOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bgF-MQ-cPr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
