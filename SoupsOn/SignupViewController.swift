@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SignupViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var emailTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
     @IBOutlet weak var signupBtn: UIButton!
+    @IBOutlet weak var errorMsg: UILabel!
     
     var titleValue: String = "Signup"
     
@@ -24,5 +26,21 @@ class SignupViewController: UIViewController {
         signupBtn.layer.shadowOpacity = 1
         signupBtn.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         signupBtn.layer.shadowRadius = 5.0
+    }
+    
+    @IBAction func signupPressed(_ sender: UIButton) {
+        
+        if let email = emailTF.text, let password = passwordTF.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    // signup fail
+                    self.errorMsg.text = e.localizedDescription
+                } else {
+                    // signup success
+                    self.performSegue(withIdentifier: "SignupToRecipeCategories", sender: self)
+                }
+            }
+        }
+        
     }
 }

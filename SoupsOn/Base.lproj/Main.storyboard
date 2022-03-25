@@ -146,7 +146,7 @@
                                     <constraint firstAttribute="height" constant="50" id="C3H-t0-NDs"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-Y2-mUN">
                                 <rect key="frame" x="224.5" y="549.5" width="139.5" height="31"/>
@@ -178,6 +178,9 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginPressed:" destination="xeI-Y8-2eu" eventType="touchUpInside" id="zRb-MC-O4U"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ggh-ER-Rld">
                                 <rect key="frame" x="50" y="675.5" width="314" height="50"/>
@@ -260,11 +263,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EhM-fb-sFS" userLabel="ErrorMsg">
+                                <rect key="frame" x="207" y="797" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DKk-fF-thT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4V2-SL-Q3a" firstAttribute="centerX" secondItem="Dpk-Ie-0wE" secondAttribute="centerX" id="1tS-3m-gRi"/>
+                            <constraint firstItem="EhM-fb-sFS" firstAttribute="top" secondItem="4V2-SL-Q3a" secondAttribute="bottom" constant="7.5" id="4OR-Yb-wyQ"/>
                             <constraint firstItem="S3T-WN-sDH" firstAttribute="centerX" secondItem="Dpk-Ie-0wE" secondAttribute="centerX" id="9Yh-u0-ZO5"/>
                             <constraint firstItem="Ggh-ER-Rld" firstAttribute="leading" secondItem="DKk-fF-thT" secondAttribute="leading" constant="50" id="CBj-AD-8hv"/>
                             <constraint firstItem="DKk-fF-thT" firstAttribute="trailing" secondItem="VGK-Y2-mUN" secondAttribute="trailing" constant="50" id="Dkd-3y-UhF"/>
@@ -279,6 +289,7 @@
                             <constraint firstItem="DKk-fF-thT" firstAttribute="trailing" secondItem="T1i-gw-FSR" secondAttribute="trailing" constant="50" id="UsL-d5-9ey"/>
                             <constraint firstItem="T1i-gw-FSR" firstAttribute="top" secondItem="lfS-LW-5kW" secondAttribute="bottom" constant="20" id="Vb2-b9-zMf"/>
                             <constraint firstItem="lfS-LW-5kW" firstAttribute="leading" secondItem="DKk-fF-thT" secondAttribute="leading" constant="50" id="WaM-qi-ObU"/>
+                            <constraint firstItem="EhM-fb-sFS" firstAttribute="centerX" secondItem="Dpk-Ie-0wE" secondAttribute="centerX" id="Yko-GM-RGs"/>
                             <constraint firstItem="mJF-9O-9Bg" firstAttribute="top" secondItem="DKk-fF-thT" secondAttribute="top" constant="60" id="bOy-s3-dRa"/>
                             <constraint firstItem="VGK-Y2-mUN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="DKk-fF-thT" secondAttribute="leading" symbolic="YES" id="ixQ-0G-gKY"/>
                             <constraint firstItem="Cgi-9z-Um4" firstAttribute="leading" secondItem="DKk-fF-thT" secondAttribute="leading" constant="50" id="kJM-A0-seY"/>
@@ -290,17 +301,35 @@
                     <navigationItem key="navigationItem" id="QE8-jB-8bH"/>
                     <connections>
                         <outlet property="emailTF" destination="lfS-LW-5kW" id="N1I-Ee-E7c"/>
+                        <outlet property="errorMsg" destination="EhM-fb-sFS" id="knF-Ht-GuL"/>
                         <outlet property="facebookBtn" destination="5z2-2A-XqL" id="FEe-pe-lra"/>
                         <outlet property="forgotPwBtn" destination="VGK-Y2-mUN" id="ZMB-wA-DBD"/>
                         <outlet property="loginBtn" destination="Cgi-9z-Um4" id="OtM-9z-Fvl"/>
                         <outlet property="passwordTF" destination="T1i-gw-FSR" id="5vR-8L-7OE"/>
                         <outlet property="signupBtn" destination="Ic3-dB-iS0" id="hYV-i1-4jd"/>
                         <outlet property="twitterBtn" destination="cKH-sf-hk6" id="LnG-Ef-qNv"/>
+                        <segue destination="5RB-US-reJ" kind="show" identifier="LoginToRecipeCategories" id="slM-1P-rfI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dbb-v6-mwk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1876.8115942028987" y="-293.30357142857139"/>
+        </scene>
+        <!--Recipe Categories Controller-->
+        <scene sceneID="BZ2-hS-CI9">
+            <objects>
+                <viewController id="5RB-US-reJ" userLabel="Recipe Categories Controller" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bgF-MQ-cPr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qVX-Hm-Boa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NTQ-hK-aEL"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="roh-8f-hqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2801" y="84"/>
         </scene>
         <!--Signup Controller-->
         <scene sceneID="mPq-61-OXu">
@@ -351,7 +380,7 @@
                                     <constraint firstAttribute="height" constant="50" id="Jec-OS-nAe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="25"/>
@@ -381,7 +410,16 @@
                                         <integer key="value" value="25"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="signupPressed:" destination="M62-IZ-R1l" eventType="touchUpInside" id="dAR-UP-SEL"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ot-z7-0oP" userLabel="ErrorMsg">
+                                <rect key="frame" x="207" y="726" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Vgd-wE-iUv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -392,6 +430,7 @@
                             <constraint firstItem="jof-Yl-xqk" firstAttribute="top" secondItem="0fo-M7-4A3" secondAttribute="bottom" constant="50" id="520-iT-0jj"/>
                             <constraint firstItem="sAY-bh-9WK" firstAttribute="top" secondItem="AJB-Cu-7pq" secondAttribute="bottom" constant="40" id="Bgx-gH-kTV"/>
                             <constraint firstItem="sAY-bh-9WK" firstAttribute="centerX" secondItem="pC6-AQ-xdA" secondAttribute="centerX" id="EQK-mH-m7N"/>
+                            <constraint firstItem="7Ot-z7-0oP" firstAttribute="top" secondItem="jof-Yl-xqk" secondAttribute="bottom" constant="21.5" id="N4V-0Y-SMi"/>
                             <constraint firstItem="b60-SJ-VZe" firstAttribute="leading" secondItem="Vgd-wE-iUv" secondAttribute="leading" constant="50" id="aYo-hF-0DF"/>
                             <constraint firstItem="jof-Yl-xqk" firstAttribute="leading" secondItem="Vgd-wE-iUv" secondAttribute="leading" constant="50" id="b8p-pP-Qb9"/>
                             <constraint firstItem="0fo-M7-4A3" firstAttribute="top" secondItem="tPB-2C-SPW" secondAttribute="bottom" constant="20" id="cjv-4m-fPb"/>
@@ -400,6 +439,7 @@
                             <constraint firstItem="Vgd-wE-iUv" firstAttribute="trailing" secondItem="0fo-M7-4A3" secondAttribute="trailing" constant="50" id="lWl-Qi-L9I"/>
                             <constraint firstItem="Vgd-wE-iUv" firstAttribute="trailing" secondItem="b60-SJ-VZe" secondAttribute="trailing" constant="50" id="mmG-nt-FLg"/>
                             <constraint firstItem="tPB-2C-SPW" firstAttribute="top" secondItem="b60-SJ-VZe" secondAttribute="bottom" constant="20" id="mnn-Gh-DAF"/>
+                            <constraint firstItem="7Ot-z7-0oP" firstAttribute="centerX" secondItem="pC6-AQ-xdA" secondAttribute="centerX" id="pfb-oW-qz0"/>
                             <constraint firstItem="AJB-Cu-7pq" firstAttribute="centerX" secondItem="pC6-AQ-xdA" secondAttribute="centerX" id="pvK-u3-LE8"/>
                             <constraint firstItem="Vgd-wE-iUv" firstAttribute="trailing" secondItem="jof-Yl-xqk" secondAttribute="trailing" constant="50" id="v4I-na-N7D"/>
                         </constraints>
@@ -407,9 +447,11 @@
                     <navigationItem key="navigationItem" id="ZJ9-1N-eF8"/>
                     <connections>
                         <outlet property="emailTF" destination="tPB-2C-SPW" id="vcj-Sj-uLy"/>
+                        <outlet property="errorMsg" destination="7Ot-z7-0oP" id="DlP-xe-afG"/>
                         <outlet property="passwordTF" destination="0fo-M7-4A3" id="i0f-eE-fZs"/>
                         <outlet property="signupBtn" destination="jof-Yl-xqk" id="uKP-r0-G3n"/>
                         <outlet property="userNameTF" destination="b60-SJ-VZe" id="maj-YD-GtW"/>
+                        <segue destination="5RB-US-reJ" kind="show" identifier="SignupToRecipeCategories" id="XbA-dA-ETf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qD-TV-uXI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -437,12 +479,16 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CuN-fA-Zg0"/>
+        <segue reference="slM-1P-rfI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login-signup-image" width="414" height="315"/>
         <image name="soup-logo" width="156" height="155"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
