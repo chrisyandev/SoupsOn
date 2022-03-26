@@ -88,9 +88,6 @@
 		DB3234EF27DC214000F07475 = {
 			isa = PBXGroup;
 			children = (
-				DB27752C27EEAAAE004B64E8 /* Data */,
-				DB27752727EE83C9004B64E8 /* Model */,
-				DB27752427ED9ECF004B64E8 /* Networking */,
 				DB3234FA27DC214000F07475 /* SoupsOn */,
 				DB3234F927DC214000F07475 /* Products */,
 			);
@@ -107,6 +104,9 @@
 		DB3234FA27DC214000F07475 /* SoupsOn */ = {
 			isa = PBXGroup;
 			children = (
+				DB27752427ED9ECF004B64E8 /* Networking */,
+				DB27752727EE83C9004B64E8 /* Model */,
+				DB27752C27EEAAAE004B64E8 /* Data */,
 				DB3234FB27DC214000F07475 /* AppDelegate.swift */,
 				DB3234FD27DC214000F07475 /* SceneDelegate.swift */,
 				DB3234FF27DC214000F07475 /* EntryController.swift */,
