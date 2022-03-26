@@ -66,7 +66,17 @@ extension RecipeResultsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         
-        // TODO
+        if let recipes = recipeData?.recipes {
+            let dataToSend: [String: Any] = ["recipe": recipes[indexPath.row]]
+            self.performSegue(withIdentifier: "RecipeResultsToRecipeDetails", sender: dataToSend)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "RecipeResultsToRecipeDetails") {
+            let destinationVC = segue.destination as! RecipeDetailsViewController
+            destinationVC.dataFromPreviousView = sender as? [String: Any]
+        }
     }
     
 }
