@@ -9,7 +9,6 @@ import UIKit
 
 struct RecipeData: Decodable {
     let recipes: [Recipe]
-    
 }
 
 struct Recipe: Decodable {
@@ -18,6 +17,8 @@ struct Recipe: Decodable {
     let servings: Int
     let extendedIngredients: [Ingredient]
     let instructions: String
+    let image: String
+    let spoonacularSourceUrl: String
 }
 
 struct Ingredient: Decodable {

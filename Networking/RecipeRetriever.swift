@@ -29,7 +29,7 @@ class RecipeRetriever {
                 
                 if let safeData = data {
                     // For debugging
-                    print(String(data: safeData, encoding: .utf8)!)
+//                    print(String(data: safeData, encoding: .utf8)!)
                     
                     // Convert JSON to object
                     self.parseJSON(recipeData: safeData)

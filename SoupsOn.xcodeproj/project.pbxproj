@@ -13,6 +13,9 @@
 		DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */; };
 		DB27752627ED9F62004B64E8 /* RecipeRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */; };
 		DB27752927EE83DC004B64E8 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752827EE83DC004B64E8 /* RecipeData.swift */; };
+		DB27752B27EEA662004B64E8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752A27EEA662004B64E8 /* CategoryCell.swift */; };
+		DB27752E27EEAAB8004B64E8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752D27EEAAB8004B64E8 /* Categories.swift */; };
+		DB27753027EEACFB004B64E8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752F27EEACFB004B64E8 /* Category.swift */; };
 		DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FB27DC214000F07475 /* AppDelegate.swift */; };
 		DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FD27DC214000F07475 /* SceneDelegate.swift */; };
 		DB32350027DC214000F07475 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FF27DC214000F07475 /* EntryController.swift */; };
@@ -28,6 +31,9 @@
 		DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoriesViewController.swift; sourceTree = "<group>"; };
 		DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRetriever.swift; sourceTree = "<group>"; };
 		DB27752827EE83DC004B64E8 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		DB27752A27EEA662004B64E8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		DB27752D27EEAAB8004B64E8 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		DB27752F27EEACFB004B64E8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DB3234F827DC214000F07475 /* SoupsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoupsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3234FB27DC214000F07475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3234FD27DC214000F07475 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,13 +71,24 @@
 			isa = PBXGroup;
 			children = (
 				DB27752827EE83DC004B64E8 /* RecipeData.swift */,
+				DB27752A27EEA662004B64E8 /* CategoryCell.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DB27752C27EEAAAE004B64E8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DB27752D27EEAAB8004B64E8 /* Categories.swift */,
+				DB27752F27EEACFB004B64E8 /* Category.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		DB3234EF27DC214000F07475 = {
 			isa = PBXGroup;
 			children = (
+				DB27752C27EEAAAE004B64E8 /* Data */,
 				DB27752727EE83C9004B64E8 /* Model */,
 				DB27752427ED9ECF004B64E8 /* Networking */,
 				DB3234FA27DC214000F07475 /* SoupsOn */,
@@ -189,9 +206,12 @@
 				DB32350027DC214000F07475 /* EntryController.swift in Sources */,
 				DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */,
 				DB32351227DC633300F07475 /* SignupViewController.swift in Sources */,
+				DB27752B27EEA662004B64E8 /* CategoryCell.swift in Sources */,
 				DB27752927EE83DC004B64E8 /* RecipeData.swift in Sources */,
+				DB27752E27EEAAB8004B64E8 /* Categories.swift in Sources */,
 				DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */,
 				DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */,
+				DB27753027EEACFB004B64E8 /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
