@@ -7,8 +7,15 @@
 
 import UIKit
 
+protocol RecipeRetrieverDelegate {
+    func didReceiveRecipeData(recipeData: RecipeData)
+}
+
 class RecipeRetriever {
+    
     let recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=1b74a3d445ce440d9338c8a2ece20a10"
+    
+    var delegate: RecipeRetrieverDelegate?
     
     func fetchRecipe(recipeName: String) {
         let urlString = "\(recipeURL)&number=1&tags=\(recipeName)"
@@ -28,11 +35,12 @@ class RecipeRetriever {
                 }
                 
                 if let safeData = data {
-                    // For debugging
-//                    print(String(data: safeData, encoding: .utf8)!)
+//                    print(String(data: safeData, encoding: .utf8)!) // For debugging
                     
-                    // Convert JSON to object
-                    self.parseJSON(recipeData: safeData)
+                    // Convert JSON to RecipeData object
+                    if let recipeData = self.parseJSON(recipeData: safeData) {
+                        self.delegate?.didReceiveRecipeData(recipeData: recipeData)
+                    }
                 }
             }
             // Start task
@@ -40,13 +48,14 @@ class RecipeRetriever {
         }
     }
     
-    func parseJSON(recipeData: Data) {
+    func parseJSON(recipeData: Data) -> RecipeData? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(RecipeData.self, from: recipeData)
-            print(decodedData)
+            return decodedData
         } catch {
             print(error)
+            return nil
         }
     }
     

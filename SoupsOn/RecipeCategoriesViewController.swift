@@ -10,15 +10,12 @@ import UIKit
 class RecipeCategoriesViewController: UIViewController {
     
     var titleValue: String = "Recipe Categories"
-    var recipeRetriever = RecipeRetriever()
     
     @IBOutlet weak var categoriesTV: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = titleValue
-        
-        recipeRetriever.fetchRecipe(recipeName: "dinner")
         
         categoriesTV.delegate = self
         categoriesTV.dataSource = self
