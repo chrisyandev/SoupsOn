@@ -25,8 +25,11 @@ class RecipeResultsViewController: UIViewController, RecipeRetrieverDelegate {
         recipeRetriever.delegate = self
         
         if let data = dataFromPreviousView {
-            let category = (data["chosenCategory"] as! String).lowercased() // "tags" query parameter must be lowercase
-            recipeRetriever.fetchRecipe(recipeName: category)
+            let query = (data["query"] as! String).lowercased() // "tags" query parameter must be lowercase
+            let words = query.split(separator: " ") // string to array ignoring whitespace
+            let tags = words.map({ $0 }).joined(separator: ",") // tags format is "apple,cookie,milk"
+            print("Tags: \(tags)")
+            recipeRetriever.fetchRecipe(recipeName: tags)
         }
         
     }

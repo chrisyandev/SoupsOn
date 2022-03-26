@@ -327,7 +327,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Gez-nh-IbE">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="categoryCell" rowHeight="100" id="hYT-CC-SDO" customClass="CategoryCell" customModule="SoupsOn" customModuleProvider="target">
@@ -369,25 +369,51 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W10-Qo-Z78">
+                                <rect key="frame" x="20" y="812" width="374" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QW0-92-61F">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="N4w-r3-Sru"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Xk-cb-hac">
+                                        <rect key="frame" x="250" y="0.0" width="124" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Search"/>
+                                        <connections>
+                                            <action selector="searchBtnPressed:" destination="5RB-US-reJ" eventType="touchUpInside" id="eWg-rz-Vun"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qVX-Hm-Boa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Gez-nh-IbE" firstAttribute="top" secondItem="qVX-Hm-Boa" secondAttribute="top" id="F2d-Ws-QU2"/>
+                            <constraint firstItem="qVX-Hm-Boa" firstAttribute="bottom" secondItem="W10-Qo-Z78" secondAttribute="bottom" id="SF3-q5-JAv"/>
+                            <constraint firstItem="W10-Qo-Z78" firstAttribute="top" secondItem="Gez-nh-IbE" secondAttribute="bottom" id="Ta2-6B-ex0"/>
                             <constraint firstItem="Gez-nh-IbE" firstAttribute="leading" secondItem="qVX-Hm-Boa" secondAttribute="leading" id="koy-4q-CdO"/>
-                            <constraint firstItem="qVX-Hm-Boa" firstAttribute="bottom" secondItem="Gez-nh-IbE" secondAttribute="bottom" id="qmR-Lq-8Bl"/>
+                            <constraint firstItem="qVX-Hm-Boa" firstAttribute="trailing" secondItem="W10-Qo-Z78" secondAttribute="trailing" constant="20" id="pBd-Fd-fb8"/>
+                            <constraint firstItem="qVX-Hm-Boa" firstAttribute="bottom" secondItem="Gez-nh-IbE" secondAttribute="bottom" constant="50" id="qmR-Lq-8Bl"/>
                             <constraint firstItem="qVX-Hm-Boa" firstAttribute="trailing" secondItem="Gez-nh-IbE" secondAttribute="trailing" id="vag-SQ-IEn"/>
+                            <constraint firstItem="W10-Qo-Z78" firstAttribute="leading" secondItem="qVX-Hm-Boa" secondAttribute="leading" constant="20" id="xed-FY-eRk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="NTQ-hK-aEL"/>
                     <connections>
                         <outlet property="categoriesTV" destination="Gez-nh-IbE" id="dzW-lY-xfh"/>
+                        <outlet property="searchTF" destination="QW0-92-61F" id="o5p-Ol-yGJ"/>
                         <segue destination="j0Q-yA-rvc" kind="show" identifier="RecipeCategoriesToRecipeResults" id="BRQ-iv-MQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roh-8f-hqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2801" y="84"/>
+            <point key="canvasLocation" x="2798.5507246376815" y="83.705357142857139"/>
         </scene>
         <!--Signup Controller-->
         <scene sceneID="mPq-61-OXu">
@@ -543,7 +569,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fX2-81-ct9">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="200" id="V9X-gh-cMG" customClass="RecipeCell" customModule="SoupsOn" customModuleProvider="target">
@@ -589,7 +615,7 @@
                             <constraint firstItem="AdV-vx-5Eu" firstAttribute="trailing" secondItem="fX2-81-ct9" secondAttribute="trailing" id="BCx-Et-6at"/>
                             <constraint firstItem="fX2-81-ct9" firstAttribute="leading" secondItem="AdV-vx-5Eu" secondAttribute="leading" id="Lik-xO-2Wh"/>
                             <constraint firstItem="fX2-81-ct9" firstAttribute="top" secondItem="AdV-vx-5Eu" secondAttribute="top" id="YU4-ma-p0q"/>
-                            <constraint firstItem="AdV-vx-5Eu" firstAttribute="bottom" secondItem="fX2-81-ct9" secondAttribute="bottom" id="jXZ-Fd-KEd"/>
+                            <constraint firstItem="AdV-vx-5Eu" firstAttribute="bottom" secondItem="fX2-81-ct9" secondAttribute="bottom" constant="50" id="jXZ-Fd-KEd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RHB-rq-vTf"/>
@@ -683,7 +709,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CuN-fA-Zg0"/>
-        <segue reference="XbA-dA-ETf"/>
+        <segue reference="EpN-Il-Iuk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login-signup-image" width="414" height="315"/>
