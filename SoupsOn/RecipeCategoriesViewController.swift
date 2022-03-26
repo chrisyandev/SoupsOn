@@ -39,7 +39,17 @@ extension RecipeCategoriesViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let dataToSend: [String: Any] = ["chosenCategory": data[indexPath.row].name]
+        self.performSegue(withIdentifier: "RecipeCategoriesToRecipeResults", sender: dataToSend)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "RecipeCategoriesToRecipeResults") {
+            let destinationVC = segue.destination as! RecipeResultsViewController
+            destinationVC.receivedData = sender as? [String: Any]
+        }
     }
     
 }
@@ -51,4 +61,6 @@ extension RecipeCategoriesViewController: UITableViewDataSource {
     }
     
 }
+
+
 

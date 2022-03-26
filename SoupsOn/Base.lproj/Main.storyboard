@@ -382,6 +382,7 @@
                     <navigationItem key="navigationItem" id="NTQ-hK-aEL"/>
                     <connections>
                         <outlet property="categoriesTV" destination="Gez-nh-IbE" id="dzW-lY-xfh"/>
+                        <segue destination="j0Q-yA-rvc" kind="show" identifier="RecipeCategoriesToRecipeResults" id="BRQ-iv-MQM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="roh-8f-hqw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -533,16 +534,17 @@
             </objects>
             <point key="canvasLocation" x="28.985507246376812" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Recipe Results View Controller-->
         <scene sceneID="sOL-63-xFi">
             <objects>
-                <viewController id="j0Q-yA-rvc" sceneMemberID="viewController">
+                <viewController id="j0Q-yA-rvc" customClass="RecipeResultsViewController" customModule="SoupsOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nqb-Xb-mQ0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="AdV-vx-5Eu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RHB-rq-vTf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pgq-9K-hO8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
