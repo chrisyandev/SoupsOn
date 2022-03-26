@@ -45,7 +45,7 @@ extension RecipeCategoriesViewController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "RecipeCategoriesToRecipeResults") {
             let destinationVC = segue.destination as! RecipeResultsViewController
-            destinationVC.receivedData = sender as? [String: Any]
+            destinationVC.dataFromPreviousView = sender as? [String: Any]
         }
     }
     

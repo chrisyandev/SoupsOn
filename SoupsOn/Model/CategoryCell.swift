@@ -18,3 +18,8 @@ class CategoryCell: UITableViewCell {
     }
     
 }
+
+struct Category {
+    var image: UIImage?
+    var name: String
+}

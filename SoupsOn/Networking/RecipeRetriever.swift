@@ -18,7 +18,7 @@ class RecipeRetriever {
     var delegate: RecipeRetrieverDelegate?
     
     func fetchRecipe(recipeName: String) {
-        let urlString = "\(recipeURL)&number=1&tags=\(recipeName)"
+        let urlString = "\(recipeURL)&number=3&tags=\(recipeName)"
         performRequest(urlString: urlString)
     }
     

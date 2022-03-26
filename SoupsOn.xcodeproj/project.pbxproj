@@ -15,7 +15,6 @@
 		DB27752927EE83DC004B64E8 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752827EE83DC004B64E8 /* RecipeData.swift */; };
 		DB27752B27EEA662004B64E8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752A27EEA662004B64E8 /* CategoryCell.swift */; };
 		DB27752E27EEAAB8004B64E8 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752D27EEAAB8004B64E8 /* Categories.swift */; };
-		DB27753027EEACFB004B64E8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752F27EEACFB004B64E8 /* Category.swift */; };
 		DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FB27DC214000F07475 /* AppDelegate.swift */; };
 		DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FD27DC214000F07475 /* SceneDelegate.swift */; };
 		DB32350027DC214000F07475 /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3234FF27DC214000F07475 /* EntryController.swift */; };
@@ -25,6 +24,7 @@
 		DB32351027DC632000F07475 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32350F27DC632000F07475 /* LoginViewController.swift */; };
 		DB32351227DC633300F07475 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32351127DC633300F07475 /* SignupViewController.swift */; };
 		DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */; };
+		DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,6 @@
 		DB27752827EE83DC004B64E8 /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
 		DB27752A27EEA662004B64E8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		DB27752D27EEAAB8004B64E8 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		DB27752F27EEACFB004B64E8 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		DB3234F827DC214000F07475 /* SoupsOn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoupsOn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3234FB27DC214000F07475 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3234FD27DC214000F07475 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +45,7 @@
 		DB32350F27DC632000F07475 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB32351127DC633300F07475 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
+		DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +74,7 @@
 			children = (
 				DB27752827EE83DC004B64E8 /* RecipeData.swift */,
 				DB27752A27EEA662004B64E8 /* CategoryCell.swift */,
+				DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -82,7 +83,6 @@
 			isa = PBXGroup;
 			children = (
 				DB27752D27EEAAB8004B64E8 /* Categories.swift */,
-				DB27752F27EEACFB004B64E8 /* Category.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -214,7 +214,7 @@
 				DB27752E27EEAAB8004B64E8 /* Categories.swift in Sources */,
 				DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */,
 				DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */,
-				DB27753027EEACFB004B64E8 /* Category.swift in Sources */,
+				DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */,
 				DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
