@@ -8,30 +8,46 @@
 import UIKit
 
 class RecipeRetriever {
-    let recipeURL = "https://api.spoonacular.com/food/products/search?apiKey=1b74a3d445ce440d9338c8a2ece20a10"
+    let recipeURL = "https://api.spoonacular.com/recipes/random?apiKey=1b74a3d445ce440d9338c8a2ece20a10"
     
     func fetchRecipe(recipeName: String) {
-        let urlString = "\(recipeURL)&query=\(recipeName)"
+        let urlString = "\(recipeURL)&number=1&tags=\(recipeName)"
         performRequest(urlString: urlString)
     }
     
     func performRequest(urlString: String) {
+        // Create URL
         if let url = URL(string: urlString) {
+            // Create URLSession
             let session = URLSession(configuration: .default)
-            let task = session.dataTask(with: url, completionHandler: handle(data:response:error:))
+            // Give session a task
+            let task = session.dataTask(with: url) {  data, response, error in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                if let safeData = data {
+                    // For debugging
+                    print(String(data: safeData, encoding: .utf8)!)
+                    
+                    // Convert JSON to object
+                    self.parseJSON(recipeData: safeData)
+                }
+            }
+            // Start task
             task.resume()
         }
     }
     
-    func handle(data: Data?, response: URLResponse?, error: Error?) {
-        if error != nil {
-            print(error!)
-            return
-        }
-        
-        if let safeData = data {
-            let dataString = String(data: safeData, encoding: .utf8)
-            print(dataString!)
+    func parseJSON(recipeData: Data) {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(RecipeData.self, from: recipeData)
+            print(decodedData)
+        } catch {
+            print(error)
         }
     }
+    
 }

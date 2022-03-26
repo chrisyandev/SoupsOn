@@ -16,7 +16,7 @@ class RecipeCategoriesViewController: UIViewController {
         super.viewDidLoad()
         title = titleValue
         
-        recipeRetriever.fetchRecipe(recipeName: "Dinner")
+        recipeRetriever.fetchRecipe(recipeName: "vegetarian,dessert")
     }
     
 }
