@@ -533,12 +533,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Save Recipe"/>
+                                <connections>
+                                    <action selector="saveRecipeBtnPressed:" destination="h2M-TC-FZZ" eventType="touchUpInside" id="Msn-zK-EKX"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="DirectionsTV" destination="3q0-oU-qt0" id="dhb-gn-uxc"/>
                         <outlet property="ingredientsTV" destination="YEX-Hs-iJm" id="aEL-yN-OpH"/>
+                        <outlet property="recipeNameTF" destination="ON0-Fb-Wl5" id="17f-Xo-N5d"/>
+                        <outlet property="servingsTF" destination="WjI-JK-pAt" id="8jq-LK-QvQ"/>
+                        <outlet property="timeToMakeTF" destination="ckJ-Ij-6tY" id="zub-yH-H6n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OKd-RB-JSN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

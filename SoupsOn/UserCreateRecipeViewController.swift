@@ -6,6 +6,9 @@ class UserCreateRecipeViewController: UIViewController {
     var numOfIngredients: Int = 1
     var numOfDirections: Int = 1
     
+    @IBOutlet weak var recipeNameTF: UITextField!
+    @IBOutlet weak var servingsTF: UITextField!
+    @IBOutlet weak var timeToMakeTF: UITextField!
     @IBOutlet weak var ingredientsTV: UITableView!
     @IBOutlet weak var directionsTV: UITableView!
     
@@ -19,14 +22,20 @@ class UserCreateRecipeViewController: UIViewController {
         directionsTV.dataSource = self
     }
     
+    @IBAction func saveRecipeBtnPressed(_ sender: Any) {
+        
+    }
+    
     @objc func addIngredientRow() {
         numOfIngredients += 1
         ingredientsTV.reloadData()
+        ingredientsTV.scrollToRow(at: [0, numOfIngredients - 1], at: .bottom, animated: true)
     }
     
     @objc func addDirectionRow() {
         numOfDirections += 1
         directionsTV.reloadData()
+        directionsTV.scrollToRow(at: [0, numOfDirections - 1], at: .bottom, animated: true)
     }
     
 }
@@ -48,6 +57,8 @@ extension UserCreateRecipeViewController: UITableViewDelegate, UITableViewDataSo
             cell.addRowBtn.addTarget(self, action: #selector(addIngredientRow), for: .touchUpInside)
             if indexPath.row < (numOfIngredients - 1) {
                 cell.addRowBtn.isHidden = true
+            } else {
+                cell.addRowBtn.isHidden = false
             }
             return cell
         } else {
@@ -55,11 +66,11 @@ extension UserCreateRecipeViewController: UITableViewDelegate, UITableViewDataSo
             cell.addRowBtn.addTarget(self, action: #selector(addDirectionRow), for: .touchUpInside)
             if indexPath.row < (numOfDirections - 1) {
                 cell.addRowBtn.isHidden = true
+            } else {
+               cell.addRowBtn.isHidden = false
             }
             return cell
         }
     }
-    
-    
     
 }
