@@ -16,6 +16,8 @@ class RecipeCell: UITableViewCell {
         if let imageURL = URL(string: recipe.image) {
             let data = try? Data(contentsOf: imageURL)
             recipeImage.image = UIImage(data: data!)
+        } else {
+            recipeImage.image = UIImage(named: "soup-logo")
         }
         recipeName.text = recipe.title
     }

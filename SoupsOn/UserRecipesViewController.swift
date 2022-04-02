@@ -14,6 +14,16 @@ class UserRecipesViewController: UIViewController {
         super.viewDidLoad()
         title = titleValue
         
+        userRecipesTV.delegate = self
+        userRecipesTV.dataSource = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchDataFirestore()
+    }
+    
+    func fetchDataFirestore() {
         db.collection(K.FStore.usersCollection).getDocuments { (querySnapshot, error) in
             if let e = error {
                 print("Error retrieving data from Firestore. \(e)")
@@ -23,12 +33,7 @@ class UserRecipesViewController: UIViewController {
                     let userDoc = snapshotDocuments.first { $0.documentID == userId }
                     let recipeData: [[String: Any]] = userDoc!["recipes"]! as! [[String: Any]]
                     
-//                    print(recipe["name"] as! String)
-//                    print(recipe["servings"] as! String)
-//                    print(recipe["timeToMake"] as! String)
-//                    print(recipe["ingredients"] as! [String])
-//                    print(recipe["directions"] as! [String])
-                    
+                    self.userRecipes = []
                     for recipe in recipeData {
                         self.userRecipes.append(UserRecipe(
                             name: recipe["name"] as! String,
@@ -46,9 +51,6 @@ class UserRecipesViewController: UIViewController {
                 }
             }
         }
-        
-        userRecipesTV.delegate = self
-        userRecipesTV.dataSource = self
     }
     
 }
