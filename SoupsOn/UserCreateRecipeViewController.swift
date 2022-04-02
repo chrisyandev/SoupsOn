@@ -28,11 +28,30 @@ class UserCreateRecipeViewController: UIViewController {
     }
     
     @IBAction func saveRecipeBtnPressed(_ sender: Any) {
-        let recipeNameIsEmpty = recipeNameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        let servingsIsEmpty = servingsTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        let timeToMakeIsEmpty = timeToMakeTF.text?.trimmingCharacters(in: .whitespacesAndNewlines) == ""
-        if recipeNameIsEmpty || servingsIsEmpty || timeToMakeIsEmpty {
+        let recipeName = recipeNameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let servings = servingsTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        let timeToMake = timeToMakeTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        if recipeName == "" || servings == "" || timeToMake == "" {
             errorMsg.text = "Fields cannot be empty"
+        } else {
+            var ingredientsDataFiltered = ingredientsData
+            ingredientsDataFiltered.removeAll { $0 == "" }
+            var directionsDataFiltered = directionsData
+            directionsDataFiltered.removeAll { $0 == "" }
+
+            guard let userId = Auth.auth().currentUser?.uid else { return }
+            let userDoc = db.collection(K.FStore.usersCollection).document(userId)
+            userDoc.updateData([
+                "recipes": FieldValue.arrayUnion([
+                    [
+                        "name": recipeName as Any,
+                        "servings": servings as Any,
+                        "timeToMake": timeToMake as Any,
+                        "ingredients": ingredientsDataFiltered,
+                        "directions": directionsDataFiltered
+                    ]
+                ])
+            ])
         }
         
     }

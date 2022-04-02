@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB195FD627F83E200018C820 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB195FD527F83E200018C820 /* Constants.swift */; };
 		DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */; };
 		DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */; };
 		DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB195FD527F83E200018C820 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewController.swift; sourceTree = "<group>"; };
 		DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreateRecipeViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */,
 				DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */,
 				DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */,
+				DB195FD527F83E200018C820 /* Constants.swift */,
 			);
 			path = SoupsOn;
 			sourceTree = "<group>";
@@ -236,6 +239,7 @@
 				DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */,
 				DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */,
 				DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */,
+				DB195FD627F83E200018C820 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
