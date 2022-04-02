@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */; };
+		DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */; };
+		DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */; };
+		DB200A3427F8084900E59CE3 /* IngredientTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3327F8084900E59CE3 /* IngredientTableCell.swift */; };
+		DB200A3627F808D200E59CE3 /* DirectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3527F808D200E59CE3 /* DirectionTableCell.swift */; };
 		DB27751527ED4B0C004B64E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB27751427ED4B0C004B64E8 /* GoogleService-Info.plist */; };
 		DB27751F27ED6510004B64E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB27751E27ED6510004B64E8 /* FirebaseAuth */; };
 		DB27752127ED6510004B64E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB27752027ED6510004B64E8 /* FirebaseFirestore */; };
@@ -30,6 +34,10 @@
 
 /* Begin PBXFileReference section */
 		DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewController.swift; sourceTree = "<group>"; };
+		DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreateRecipeViewController.swift; sourceTree = "<group>"; };
+		DB200A3327F8084900E59CE3 /* IngredientTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientTableCell.swift; sourceTree = "<group>"; };
+		DB200A3527F808D200E59CE3 /* DirectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionTableCell.swift; sourceTree = "<group>"; };
 		DB27751427ED4B0C004B64E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCategoriesViewController.swift; sourceTree = "<group>"; };
 		DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRetriever.swift; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 				DB27752827EE83DC004B64E8 /* RecipeData.swift */,
 				DB27752A27EEA662004B64E8 /* CategoryCell.swift */,
 				DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */,
+				DB200A3327F8084900E59CE3 /* IngredientTableCell.swift */,
+				DB200A3527F808D200E59CE3 /* DirectionTableCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +134,8 @@
 				DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */,
 				DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */,
 				DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */,
+				DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */,
+				DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */,
 			);
 			path = SoupsOn;
 			sourceTree = "<group>";
@@ -212,13 +224,17 @@
 				DB32350027DC214000F07475 /* EntryController.swift in Sources */,
 				DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */,
 				DB32351227DC633300F07475 /* SignupViewController.swift in Sources */,
+				DB200A3427F8084900E59CE3 /* IngredientTableCell.swift in Sources */,
+				DB200A3627F808D200E59CE3 /* DirectionTableCell.swift in Sources */,
 				DB27752B27EEA662004B64E8 /* CategoryCell.swift in Sources */,
 				DB27752927EE83DC004B64E8 /* RecipeData.swift in Sources */,
 				DB27752E27EEAAB8004B64E8 /* Categories.swift in Sources */,
 				DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */,
 				DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */,
 				DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */,
+				DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */,
 				DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */,
+				DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */,
 				DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
