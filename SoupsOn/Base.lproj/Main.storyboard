@@ -330,15 +330,15 @@
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userRecipeCell" id="BQd-4m-Pbf" customClass="UserRecipeCell" customModule="SoupsOn" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="374" height="0.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userRecipeCell" rowHeight="0.0" id="BQd-4m-Pbf" customClass="UserRecipeCell" customModule="SoupsOn" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="1.1920928955078125e-07"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BQd-4m-Pbf" id="qy2-6V-wlR">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="1.1920928955078125e-07"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo7-IJ-ZtE">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -382,11 +382,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="userRecipesTV" destination="Y4l-i6-Cyc" id="J4R-xX-DpQ"/>
+                        <segue destination="Tgb-vf-Ong" kind="show" identifier="UserRecipesToRecipeDetails" id="7EN-ya-EgZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQw-sR-1o8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3666.666666666667" y="-615.40178571428567"/>
+            <point key="canvasLocation" x="3667" y="-615"/>
         </scene>
         <!--User Create Recipe View Controller-->
         <scene sceneID="s2H-Gh-0LQ">
@@ -919,6 +920,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="My Recipes"/>
+                                <connections>
+                                    <segue destination="4RH-pU-67l" kind="show" id="pEl-Zs-Bxm"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -939,11 +943,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRP-nO-caB">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NL0-zj-Yxf">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VDF-NE-m4T">
-                                        <rect key="frame" x="20" y="50" width="374" height="102.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wVd-7n-90s">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="122.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recipe Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ie-QM-ABT">
                                                 <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
@@ -951,26 +955,26 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready In Minutes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa5-71-UAi">
-                                                <rect key="frame" x="0.0" y="20.5" width="374" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time to Make" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oa5-71-UAi">
+                                                <rect key="frame" x="0.0" y="25.5" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Servings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LUH-3V-dw8">
-                                                <rect key="frame" x="0.0" y="41" width="374" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="51" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOt-vd-3Es">
-                                                <rect key="frame" x="0.0" y="61.5" width="374" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="76.5" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instructions" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHd-ei-9H8">
-                                                <rect key="frame" x="0.0" y="82" width="374" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="102" width="374" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -979,21 +983,23 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="VDF-NE-m4T" firstAttribute="top" secondItem="28g-at-ipX" secondAttribute="top" constant="50" id="2vb-3Q-esi"/>
-                                    <constraint firstItem="28g-at-ipX" firstAttribute="trailing" secondItem="VDF-NE-m4T" secondAttribute="trailing" constant="20" id="vUA-jc-hby"/>
-                                    <constraint firstItem="VDF-NE-m4T" firstAttribute="leading" secondItem="28g-at-ipX" secondAttribute="leading" constant="20" id="wnz-bx-lUM"/>
+                                    <constraint firstItem="wVd-7n-90s" firstAttribute="top" secondItem="NL0-zj-Yxf" secondAttribute="top" id="CCR-lN-VjZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="wVd-7n-90s" secondAttribute="trailing" id="FnB-uJ-OG2"/>
+                                    <constraint firstItem="wVd-7n-90s" firstAttribute="leading" secondItem="NL0-zj-Yxf" secondAttribute="leading" id="Pif-Mr-EKK"/>
+                                    <constraint firstItem="wVd-7n-90s" firstAttribute="width" secondItem="NL0-zj-Yxf" secondAttribute="width" id="Y35-XC-T0g"/>
+                                    <constraint firstAttribute="bottom" secondItem="wVd-7n-90s" secondAttribute="bottom" id="rEZ-od-0DQ"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="JfD-9A-07W"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="28g-at-ipX"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="ecS-7T-B0w"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="KIR-dZ-k9M"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S4o-FI-MER"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="YRP-nO-caB" firstAttribute="leading" secondItem="S4o-FI-MER" secondAttribute="leading" constant="5" id="1LO-rl-fy2"/>
-                            <constraint firstItem="YRP-nO-caB" firstAttribute="trailing" secondItem="S4o-FI-MER" secondAttribute="trailing" constant="5" id="Dam-zA-Geq"/>
-                            <constraint firstItem="YRP-nO-caB" firstAttribute="top" secondItem="S4o-FI-MER" secondAttribute="top" constant="5" id="EbY-2V-s4i"/>
-                            <constraint firstItem="YRP-nO-caB" firstAttribute="bottom" secondItem="S4o-FI-MER" secondAttribute="bottom" constant="5" id="FfH-qp-Ra2"/>
+                            <constraint firstItem="S4o-FI-MER" firstAttribute="trailing" secondItem="NL0-zj-Yxf" secondAttribute="trailing" constant="20" id="1KU-Ih-q3c"/>
+                            <constraint firstItem="NL0-zj-Yxf" firstAttribute="top" secondItem="S4o-FI-MER" secondAttribute="top" id="OdU-eC-FZu"/>
+                            <constraint firstItem="NL0-zj-Yxf" firstAttribute="leading" secondItem="S4o-FI-MER" secondAttribute="leading" constant="20" id="Vbe-hQ-9zG"/>
+                            <constraint firstItem="NL0-zj-Yxf" firstAttribute="bottom" secondItem="S4o-FI-MER" secondAttribute="bottom" id="wTX-mD-8vH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qor-EN-vLp">
@@ -1009,9 +1015,9 @@
                     <connections>
                         <outlet property="ingredients" destination="tOt-vd-3Es" id="0a8-7F-evj"/>
                         <outlet property="instructions" destination="iHd-ei-9H8" id="M15-PD-Fhz"/>
-                        <outlet property="readyInMinutes" destination="oa5-71-UAi" id="kE2-ca-pob"/>
                         <outlet property="recipeName" destination="9Ie-QM-ABT" id="fhW-94-PeY"/>
                         <outlet property="servings" destination="LUH-3V-dw8" id="fks-At-Hi4"/>
+                        <outlet property="timeToMake" destination="oa5-71-UAi" id="LHT-f4-57g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="66p-xA-oFW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1020,8 +1026,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="7EN-ya-EgZ"/>
         <segue reference="CuN-fA-Zg0"/>
         <segue reference="EpN-Il-Iuk"/>
+        <segue reference="pEl-Zs-Bxm"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="login-signup-image" width="414" height="315"/>

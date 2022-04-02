@@ -38,18 +38,17 @@ class UserRecipesViewController: UIViewController {
                             directions: recipe["directions"] as! [String]
                         ))
                     }
+                    
+                    DispatchQueue.main.async {
+                        print(self.userRecipes)
+                        self.userRecipesTV.reloadData()
+                    }
                 }
             }
         }
         
-        
         userRecipesTV.delegate = self
         userRecipesTV.dataSource = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print(self.userRecipes)
-        userRecipesTV.reloadData()
     }
     
 }
@@ -65,6 +64,27 @@ extension UserRecipesViewController: UITableViewDelegate, UITableViewDataSource 
         cell.recipeName.text = userRecipes[indexPath.row].name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 140.0
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let dataToSend: [String: Any] = [
+            "recipe": userRecipes[indexPath.row],
+            "recipeType": K.RecipeType.userRecipe
+        ]
+        self.performSegue(withIdentifier: "UserRecipesToRecipeDetails", sender: dataToSend)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "UserRecipesToRecipeDetails") {
+            let destinationVC = segue.destination as! RecipeDetailsViewController
+            destinationVC.dataFromPreviousView = sender as? [String: Any]
+        }
     }
     
 }

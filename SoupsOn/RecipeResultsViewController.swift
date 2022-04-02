@@ -70,7 +70,10 @@ extension RecipeResultsViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         
         if let recipes = recipeData?.recipes {
-            let dataToSend: [String: Any] = ["recipe": recipes[indexPath.row]]
+            let dataToSend: [String: Any] = [
+                "recipe": recipes[indexPath.row],
+                "recipeType": K.RecipeType.onlineRecipe
+            ]
             self.performSegue(withIdentifier: "RecipeResultsToRecipeDetails", sender: dataToSend)
         }
     }
