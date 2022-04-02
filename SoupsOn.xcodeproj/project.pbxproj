@@ -8,14 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		DB195FD627F83E200018C820 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB195FD527F83E200018C820 /* Constants.swift */; };
+		DB195FDA27F852BA0018C820 /* UserRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB195FD927F852BA0018C820 /* UserRecipeCell.swift */; };
+		DB195FDF27F863980018C820 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB195FDE27F863980018C820 /* FirebaseAuth */; };
+		DB195FE127F863980018C820 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB195FE027F863980018C820 /* FirebaseFirestore */; };
+		DB195FE327F863980018C820 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = DB195FE227F863980018C820 /* FirebaseFirestoreSwift-Beta */; };
 		DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */; };
 		DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */; };
 		DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */; };
 		DB200A3427F8084900E59CE3 /* IngredientTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3327F8084900E59CE3 /* IngredientTableCell.swift */; };
 		DB200A3627F808D200E59CE3 /* DirectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB200A3527F808D200E59CE3 /* DirectionTableCell.swift */; };
 		DB27751527ED4B0C004B64E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB27751427ED4B0C004B64E8 /* GoogleService-Info.plist */; };
-		DB27751F27ED6510004B64E8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB27751E27ED6510004B64E8 /* FirebaseAuth */; };
-		DB27752127ED6510004B64E8 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DB27752027ED6510004B64E8 /* FirebaseFirestore */; };
 		DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752227ED67F7004B64E8 /* RecipeCategoriesViewController.swift */; };
 		DB27752627ED9F62004B64E8 /* RecipeRetriever.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752527ED9F62004B64E8 /* RecipeRetriever.swift */; };
 		DB27752927EE83DC004B64E8 /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB27752827EE83DC004B64E8 /* RecipeData.swift */; };
@@ -29,12 +31,14 @@
 		DB32350827DC214000F07475 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB32350627DC214000F07475 /* LaunchScreen.storyboard */; };
 		DB32351027DC632000F07475 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32350F27DC632000F07475 /* LoginViewController.swift */; };
 		DB32351227DC633300F07475 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32351127DC633300F07475 /* SignupViewController.swift */; };
+		DB8125BC27F8C31500F3300B /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8125BB27F8C31500F3300B /* UserRecipe.swift */; };
 		DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */; };
 		DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB195FD527F83E200018C820 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DB195FD927F852BA0018C820 /* UserRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeCell.swift; sourceTree = "<group>"; };
 		DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
 		DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipesViewController.swift; sourceTree = "<group>"; };
 		DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCreateRecipeViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 		DB32350927DC214000F07475 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB32350F27DC632000F07475 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DB32351127DC633300F07475 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		DB8125BB27F8C31500F3300B /* UserRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipe.swift; sourceTree = "<group>"; };
 		DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
 		DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,8 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB27751F27ED6510004B64E8 /* FirebaseAuth in Frameworks */,
-				DB27752127ED6510004B64E8 /* FirebaseFirestore in Frameworks */,
+				DB195FE327F863980018C820 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				DB195FDF27F863980018C820 /* FirebaseAuth in Frameworks */,
+				DB195FE127F863980018C820 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,8 @@
 				DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */,
 				DB200A3327F8084900E59CE3 /* IngredientTableCell.swift */,
 				DB200A3527F808D200E59CE3 /* DirectionTableCell.swift */,
+				DB195FD927F852BA0018C820 /* UserRecipeCell.swift */,
+				DB8125BB27F8C31500F3300B /* UserRecipe.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -160,8 +168,9 @@
 			);
 			name = SoupsOn;
 			packageProductDependencies = (
-				DB27751E27ED6510004B64E8 /* FirebaseAuth */,
-				DB27752027ED6510004B64E8 /* FirebaseFirestore */,
+				DB195FDE27F863980018C820 /* FirebaseAuth */,
+				DB195FE027F863980018C820 /* FirebaseFirestore */,
+				DB195FE227F863980018C820 /* FirebaseFirestoreSwift-Beta */,
 			);
 			productName = SoupsOn;
 			productReference = DB3234F827DC214000F07475 /* SoupsOn.app */;
@@ -192,7 +201,7 @@
 			);
 			mainGroup = DB3234EF27DC214000F07475;
 			packageReferences = (
-				DB27751D27ED6510004B64E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				DB195FDD27F863980018C820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = DB3234F927DC214000F07475 /* Products */;
 			projectDirPath = "";
@@ -236,8 +245,10 @@
 				DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */,
 				DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */,
 				DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */,
+				DB8125BC27F8C31500F3300B /* UserRecipe.swift in Sources */,
 				DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */,
 				DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */,
+				DB195FDA27F852BA0018C820 /* UserRecipeCell.swift in Sources */,
 				DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */,
 				DB195FD627F83E200018C820 /* Constants.swift in Sources */,
 			);
@@ -461,7 +472,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		DB27751D27ED6510004B64E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		DB195FDD27F863980018C820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -472,15 +483,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		DB27751E27ED6510004B64E8 /* FirebaseAuth */ = {
+		DB195FDE27F863980018C820 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB27751D27ED6510004B64E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = DB195FDD27F863980018C820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
 		};
-		DB27752027ED6510004B64E8 /* FirebaseFirestore */ = {
+		DB195FE027F863980018C820 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = DB27751D27ED6510004B64E8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = DB195FDD27F863980018C820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
+		};
+		DB195FE227F863980018C820 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB195FDD27F863980018C820 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -31,8 +31,10 @@ class UserCreateRecipeViewController: UIViewController {
         let recipeName = recipeNameTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let servings = servingsTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
         let timeToMake = timeToMakeTF.text?.trimmingCharacters(in: .whitespacesAndNewlines)
+        
         if recipeName == "" || servings == "" || timeToMake == "" {
             errorMsg.text = "Fields cannot be empty"
+            
         } else {
             var ingredientsDataFiltered = ingredientsData
             ingredientsDataFiltered.removeAll { $0 == "" }
@@ -52,6 +54,8 @@ class UserCreateRecipeViewController: UIViewController {
                     ]
                 ])
             ])
+            
+            self.navigationController?.popViewController(animated: true)
         }
         
     }

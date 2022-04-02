@@ -325,8 +325,47 @@
                     <view key="view" contentMode="scaleToFill" id="JYi-kG-dju">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Y4l-i6-Cyc">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="userRecipeCell" id="BQd-4m-Pbf" customClass="UserRecipeCell" customModule="SoupsOn" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="0.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BQd-4m-Pbf" id="qy2-6V-wlR">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="0.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo7-IJ-ZtE">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="wo7-IJ-ZtE" secondAttribute="trailing" id="4vZ-DA-alF"/>
+                                                <constraint firstAttribute="bottom" secondItem="wo7-IJ-ZtE" secondAttribute="bottom" id="H5x-3y-qWV"/>
+                                                <constraint firstItem="wo7-IJ-ZtE" firstAttribute="top" secondItem="qy2-6V-wlR" secondAttribute="top" id="c7O-JC-GFe"/>
+                                                <constraint firstItem="wo7-IJ-ZtE" firstAttribute="leading" secondItem="qy2-6V-wlR" secondAttribute="leading" id="j4d-4n-kuz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="recipeName" destination="wo7-IJ-ZtE" id="GG5-gS-42z"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="OJN-3N-ooQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Y4l-i6-Cyc" firstAttribute="top" secondItem="OJN-3N-ooQ" secondAttribute="top" id="1wU-E3-zCs"/>
+                            <constraint firstItem="Y4l-i6-Cyc" firstAttribute="bottom" secondItem="OJN-3N-ooQ" secondAttribute="bottom" id="j34-Il-2Hw"/>
+                            <constraint firstItem="OJN-3N-ooQ" firstAttribute="trailing" secondItem="Y4l-i6-Cyc" secondAttribute="trailing" constant="20" id="ntO-Kh-2jH"/>
+                            <constraint firstItem="Y4l-i6-Cyc" firstAttribute="leading" secondItem="OJN-3N-ooQ" secondAttribute="leading" constant="20" id="syc-Gx-FBj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MS8-04-3La">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="j4x-BJ-Pxv">
@@ -341,10 +380,13 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="userRecipesTV" destination="Y4l-i6-Cyc" id="J4R-xX-DpQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQw-sR-1o8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3667" y="-615"/>
+            <point key="canvasLocation" x="3666.666666666667" y="-615.40178571428567"/>
         </scene>
         <!--User Create Recipe View Controller-->
         <scene sceneID="s2H-Gh-0LQ">
@@ -546,7 +588,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="DirectionsTV" destination="3q0-oU-qt0" id="dhb-gn-uxc"/>
+                        <outlet property="directionsTV" destination="3q0-oU-qt0" id="Ag7-2h-QzG"/>
                         <outlet property="errorMsg" destination="Z72-kZ-p1W" id="dob-QU-Dds"/>
                         <outlet property="ingredientsTV" destination="YEX-Hs-iJm" id="aEL-yN-OpH"/>
                         <outlet property="recipeNameTF" destination="ON0-Fb-Wl5" id="17f-Xo-N5d"/>
