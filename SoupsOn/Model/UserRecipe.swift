@@ -1,9 +1,9 @@
 import UIKit
 
 struct UserRecipe {
-    let name: String
-    let servings: String
-    let timeToMake: String
-    let ingredients: [String]
-    let directions: [String]
+    var name: String
+    var servings: String
+    var timeToMake: String
+    var ingredients: [String]
+    var directions: [String]
 }

@@ -5,8 +5,6 @@ class UserCreateRecipeViewController: UIViewController {
     
     var titleValue: String = "Create Recipe"
     let db = Firestore.firestore()
-    var numOfIngredients: Int = 1
-    var numOfDirections: Int = 1
     var ingredientsData: [String] = [""]
     var directionsData: [String] = [""]
     
@@ -66,7 +64,6 @@ class UserCreateRecipeViewController: UIViewController {
         } else {
             ingredientsData[textField.tag] = ""
         }
-        print(ingredientsData)
     }
     
     @objc func directionTextFieldDidChange(_ textField: UITextField) {
@@ -75,21 +72,18 @@ class UserCreateRecipeViewController: UIViewController {
         } else {
             directionsData[textField.tag] = ""
         }
-        print(directionsData)
     }
     
     @objc func addIngredientRow() {
-        numOfIngredients += 1
         ingredientsData.append("")
         ingredientsTV.reloadData()
-        ingredientsTV.scrollToRow(at: [0, numOfIngredients - 1], at: .bottom, animated: true)
+        ingredientsTV.scrollToRow(at: [0, ingredientsData.count - 1], at: .bottom, animated: true)
     }
     
     @objc func addDirectionRow() {
-        numOfDirections += 1
         directionsData.append("")
         directionsTV.reloadData()
-        directionsTV.scrollToRow(at: [0, numOfDirections - 1], at: .bottom, animated: true)
+        directionsTV.scrollToRow(at: [0, directionsData.count - 1], at: .bottom, animated: true)
     }
     
 }
@@ -99,9 +93,9 @@ extension UserCreateRecipeViewController: UITableViewDelegate, UITableViewDataSo
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if tableView === ingredientsTV {
-            return numOfIngredients
+            return ingredientsData.count
         } else {
-            return numOfDirections
+            return directionsData.count
         }
     }
     
@@ -112,7 +106,7 @@ extension UserCreateRecipeViewController: UITableViewDelegate, UITableViewDataSo
             cell.ingredientTF.addTarget(self, action: #selector(ingredientTextFieldDidChange(_:)), for: .editingChanged)
             cell.ingredientTF.tag = indexPath.row
             cell.addRowBtn.addTarget(self, action: #selector(addIngredientRow), for: .touchUpInside)
-            if indexPath.row < (numOfIngredients - 1) {
+            if indexPath.row < (ingredientsData.count - 1) {
                 cell.addRowBtn.isHidden = true
             } else {
                 cell.addRowBtn.isHidden = false
@@ -124,7 +118,7 @@ extension UserCreateRecipeViewController: UITableViewDelegate, UITableViewDataSo
             cell.directionTF.addTarget(self, action: #selector(directionTextFieldDidChange(_:)), for: .editingChanged)
             cell.directionTF.tag = indexPath.row
             cell.addRowBtn.addTarget(self, action: #selector(addDirectionRow), for: .touchUpInside)
-            if indexPath.row < (numOfDirections - 1) {
+            if indexPath.row < (directionsData.count - 1) {
                 cell.addRowBtn.isHidden = true
             } else {
                cell.addRowBtn.isHidden = false

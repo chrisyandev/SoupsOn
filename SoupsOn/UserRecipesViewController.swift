@@ -51,7 +51,6 @@ class UserRecipesViewController: UIViewController {
     }
     
     func deleteRecipe(row: Int) {
-        print("Delete")
         self.userRecipes.remove(at: row)
 
         guard let userId = Auth.auth().currentUser?.uid else { return }
@@ -78,8 +77,11 @@ class UserRecipesViewController: UIViewController {
     }
     
     func editRecipe(row: Int) {
-        print("Edit")
-        print(self.userRecipes[row])
+        let dataToSend: [String: Any] = [
+            "userRecipes": userRecipes,
+            "index": row
+        ]
+        self.performSegue(withIdentifier: "UserRecipesToUserEditRecipe", sender: dataToSend)
     }
     
 }
@@ -112,10 +114,20 @@ extension UserRecipesViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "UserRecipesToRecipeDetails") {
+        switch segue.identifier {
+            
+        case "UserRecipesToRecipeDetails":
             let destinationVC = segue.destination as! RecipeDetailsViewController
             destinationVC.dataFromPreviousView = sender as? [String: Any]
+            
+        case "UserRecipesToUserEditRecipe":
+            let destinationVC = segue.destination as! UserEditRecipeViewController
+            destinationVC.dataFromPreviousView = sender as? [String: Any]
+            
+        default:
+            print("Segue does not exist")
         }
+        
     }
     
     func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

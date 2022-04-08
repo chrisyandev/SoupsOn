@@ -33,7 +33,10 @@
 		DB32351227DC633300F07475 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB32351127DC633300F07475 /* SignupViewController.swift */; };
 		DB8125BC27F8C31500F3300B /* UserRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8125BB27F8C31500F3300B /* UserRecipe.swift */; };
 		DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */; };
+		DBAA932627FFFB87008D7867 /* EditIngredientTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA932527FFFB87008D7867 /* EditIngredientTableCell.swift */; };
+		DBAA932827FFFB95008D7867 /* EditDirectionTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAA932727FFFB95008D7867 /* EditDirectionTableCell.swift */; };
 		DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */; };
+		DBDBAFF527FFF03A00304E7D /* UserEditRecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDBAFF427FFF03A00304E7D /* UserEditRecipeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,7 +65,10 @@
 		DB32351127DC633300F07475 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		DB8125BB27F8C31500F3300B /* UserRecipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipe.swift; sourceTree = "<group>"; };
 		DB8A5F7927EEC09800470BA9 /* RecipeResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeResultsViewController.swift; sourceTree = "<group>"; };
+		DBAA932527FFFB87008D7867 /* EditIngredientTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditIngredientTableCell.swift; sourceTree = "<group>"; };
+		DBAA932727FFFB95008D7867 /* EditDirectionTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditDirectionTableCell.swift; sourceTree = "<group>"; };
 		DBC52B7527EEF5C2003FE1DF /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
+		DBDBAFF427FFF03A00304E7D /* UserEditRecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEditRecipeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,8 @@
 				DB200A3527F808D200E59CE3 /* DirectionTableCell.swift */,
 				DB195FD927F852BA0018C820 /* UserRecipeCell.swift */,
 				DB8125BB27F8C31500F3300B /* UserRecipe.swift */,
+				DBAA932527FFFB87008D7867 /* EditIngredientTableCell.swift */,
+				DBAA932727FFFB95008D7867 /* EditDirectionTableCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 				DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */,
 				DB200A2D27F7CD2F00E59CE3 /* UserRecipesViewController.swift */,
 				DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */,
+				DBDBAFF427FFF03A00304E7D /* UserEditRecipeViewController.swift */,
 				DB195FD527F83E200018C820 /* Constants.swift */,
 			);
 			path = SoupsOn;
@@ -247,8 +256,11 @@
 				DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */,
 				DB8125BC27F8C31500F3300B /* UserRecipe.swift in Sources */,
 				DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */,
+				DBDBAFF527FFF03A00304E7D /* UserEditRecipeViewController.swift in Sources */,
+				DBAA932827FFFB95008D7867 /* EditDirectionTableCell.swift in Sources */,
 				DB200A3227F7CDE400E59CE3 /* UserCreateRecipeViewController.swift in Sources */,
 				DB195FDA27F852BA0018C820 /* UserRecipeCell.swift in Sources */,
+				DBAA932627FFFB87008D7867 /* EditIngredientTableCell.swift in Sources */,
 				DB1D87AF27EF0F3A006318DB /* RecipeDetailsViewController.swift in Sources */,
 				DB195FD627F83E200018C820 /* Constants.swift in Sources */,
 			);
