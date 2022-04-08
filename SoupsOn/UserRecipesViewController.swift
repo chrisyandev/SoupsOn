@@ -14,17 +14,14 @@ class UserRecipesViewController: UIViewController {
         super.viewDidLoad()
         title = titleValue
         
+        fetchDataFirestore()
+        
         userRecipesTV.delegate = self
         userRecipesTV.dataSource = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        fetchDataFirestore()
-    }
-    
     func fetchDataFirestore() {
-        db.collection(K.FStore.usersCollection).getDocuments { (querySnapshot, error) in
+        db.collection(K.FStore.usersCollection).addSnapshotListener { (querySnapshot, error) in
             if let e = error {
                 print("Error retrieving data from Firestore. \(e)")
             } else {
@@ -51,6 +48,38 @@ class UserRecipesViewController: UIViewController {
                 }
             }
         }
+    }
+    
+    func deleteRecipe(row: Int) {
+        print("Delete")
+        self.userRecipes.remove(at: row)
+
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        let userDoc = db.collection(K.FStore.usersCollection).document(userId)
+        
+        userDoc.setData([
+            "recipes": []
+        ])
+        
+        for recipe in userRecipes {
+            userDoc.updateData([
+                "recipes": FieldValue.arrayUnion([
+                    [
+                        "name": recipe.name as Any,
+                        "servings": recipe.servings as Any,
+                        "timeToMake": recipe.timeToMake as Any,
+                        "ingredients": recipe.ingredients,
+                        "directions": recipe.directions
+                    ]
+                ])
+            ])
+        }
+        
+    }
+    
+    func editRecipe(row: Int) {
+        print("Edit")
+        print(self.userRecipes[row])
     }
     
 }
@@ -87,6 +116,22 @@ extension UserRecipesViewController: UITableViewDelegate, UITableViewDataSource 
             let destinationVC = segue.destination as! RecipeDetailsViewController
             destinationVC.dataFromPreviousView = sender as? [String: Any]
         }
+    }
+    
+    func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .normal, title: "Delete") { [weak self] (action, view, completionHandler) in
+            self?.deleteRecipe(row: indexPath.row)
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = .red
+        
+        let editAction = UIContextualAction(style: .normal, title: "Edit") { [weak self] (action, view, completionHandler) in
+            self?.editRecipe(row: indexPath.row)
+            completionHandler(true)
+        }
+        editAction.backgroundColor = .blue
+        
+        return UISwipeActionsConfiguration(actions: [deleteAction, editAction])
     }
     
 }
