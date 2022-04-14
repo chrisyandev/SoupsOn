@@ -19,6 +19,7 @@ class Recipe: Codable {
     let instructions: String
     let image: String
     let spoonacularSourceUrl: String
+    let analyzedInstructions: [Instruction]
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -35,6 +36,7 @@ class Recipe: Codable {
         extendedIngredients = try container.decode(Array.self, forKey: .extendedIngredients)
         instructions = try container.decode(String.self, forKey: .instructions)
         spoonacularSourceUrl = try container.decode(String.self, forKey: .spoonacularSourceUrl)
+        analyzedInstructions = try container.decode(Array.self, forKey: .analyzedInstructions)
     }
 }
 
@@ -43,3 +45,11 @@ class Ingredient: Codable {
     let original: String
 }
 
+class Instruction: Codable {
+    let steps: [Step]
+}
+
+class Step: Codable {
+    let number: Int
+    let step: String
+}

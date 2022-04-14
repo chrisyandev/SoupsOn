@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB007CDF2808BC1F00FE878F /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB007CDE2808BC1F00FE878F /* MainTabBarController.swift */; };
+		DB007CE12808C43C00FE878F /* RecipeInstructionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB007CE02808C43C00FE878F /* RecipeInstructionsViewController.swift */; };
+		DB007CE32808CA4800FE878F /* RecipeInstructionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB007CE22808CA4800FE878F /* RecipeInstructionCell.swift */; };
 		DB195FD627F83E200018C820 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB195FD527F83E200018C820 /* Constants.swift */; };
 		DB195FDA27F852BA0018C820 /* UserRecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB195FD927F852BA0018C820 /* UserRecipeCell.swift */; };
 		DB195FDF27F863980018C820 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DB195FDE27F863980018C820 /* FirebaseAuth */; };
@@ -40,6 +43,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB007CDE2808BC1F00FE878F /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		DB007CE02808C43C00FE878F /* RecipeInstructionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionsViewController.swift; sourceTree = "<group>"; };
+		DB007CE22808CA4800FE878F /* RecipeInstructionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeInstructionCell.swift; sourceTree = "<group>"; };
 		DB195FD527F83E200018C820 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DB195FD927F852BA0018C820 /* UserRecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRecipeCell.swift; sourceTree = "<group>"; };
 		DB1D87AE27EF0F3A006318DB /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 				DB8125BB27F8C31500F3300B /* UserRecipe.swift */,
 				DBAA932527FFFB87008D7867 /* EditIngredientTableCell.swift */,
 				DBAA932727FFFB95008D7867 /* EditDirectionTableCell.swift */,
+				DB007CE22808CA4800FE878F /* RecipeInstructionCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -156,6 +163,8 @@
 				DB200A3127F7CDE400E59CE3 /* UserCreateRecipeViewController.swift */,
 				DBDBAFF427FFF03A00304E7D /* UserEditRecipeViewController.swift */,
 				DB195FD527F83E200018C820 /* Constants.swift */,
+				DB007CDE2808BC1F00FE878F /* MainTabBarController.swift */,
+				DB007CE02808C43C00FE878F /* RecipeInstructionsViewController.swift */,
 			);
 			path = SoupsOn;
 			sourceTree = "<group>";
@@ -242,6 +251,7 @@
 			files = (
 				DB27752627ED9F62004B64E8 /* RecipeRetriever.swift in Sources */,
 				DB32351027DC632000F07475 /* LoginViewController.swift in Sources */,
+				DB007CDF2808BC1F00FE878F /* MainTabBarController.swift in Sources */,
 				DB32350027DC214000F07475 /* EntryController.swift in Sources */,
 				DB27752327ED67F7004B64E8 /* RecipeCategoriesViewController.swift in Sources */,
 				DB32351227DC633300F07475 /* SignupViewController.swift in Sources */,
@@ -249,12 +259,14 @@
 				DB200A3627F808D200E59CE3 /* DirectionTableCell.swift in Sources */,
 				DB27752B27EEA662004B64E8 /* CategoryCell.swift in Sources */,
 				DB27752927EE83DC004B64E8 /* RecipeData.swift in Sources */,
+				DB007CE32808CA4800FE878F /* RecipeInstructionCell.swift in Sources */,
 				DB27752E27EEAAB8004B64E8 /* Categories.swift in Sources */,
 				DB3234FC27DC214000F07475 /* AppDelegate.swift in Sources */,
 				DB3234FE27DC214000F07475 /* SceneDelegate.swift in Sources */,
 				DBC52B7627EEF5C2003FE1DF /* RecipeCell.swift in Sources */,
 				DB200A2E27F7CD2F00E59CE3 /* UserRecipesViewController.swift in Sources */,
 				DB8125BC27F8C31500F3300B /* UserRecipe.swift in Sources */,
+				DB007CE12808C43C00FE878F /* RecipeInstructionsViewController.swift in Sources */,
 				DB8A5F7A27EEC09800470BA9 /* RecipeResultsViewController.swift in Sources */,
 				DBDBAFF527FFF03A00304E7D /* UserEditRecipeViewController.swift in Sources */,
 				DBAA932827FFFB95008D7867 /* EditDirectionTableCell.swift in Sources */,

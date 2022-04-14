@@ -117,7 +117,7 @@ extension UserRecipesViewController: UITableViewDelegate, UITableViewDataSource 
         switch segue.identifier {
             
         case "UserRecipesToRecipeDetails":
-            let destinationVC = segue.destination as! RecipeDetailsViewController
+            let destinationVC = segue.destination as! MainTabBarController
             destinationVC.dataFromPreviousView = sender as? [String: Any]
             
         case "UserRecipesToUserEditRecipe":

@@ -35,16 +35,6 @@ class RecipeResultsViewController: UIViewController, RecipeRetrieverDelegate {
     }
     
     func didReceiveRecipeData(recipeData: RecipeData) {
-//        for recipe in recipeData.recipes {
-//            print(recipe.title)
-//            print(recipe.readyInMinutes)
-//            print(recipe.servings)
-//            print(recipe.extendedIngredients)
-//            print(recipe.instructions)
-//            print(recipe.image)
-//            print(recipe.spoonacularSourceUrl)
-//            print("===============================")
-//        }
         DispatchQueue.main.async {
             print(recipeData)
             self.recipeData = recipeData
@@ -80,7 +70,7 @@ extension RecipeResultsViewController: UITableViewDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "RecipeResultsToRecipeDetails") {
-            let destinationVC = segue.destination as! RecipeDetailsViewController
+            let destinationVC = segue.destination as! MainTabBarController
             destinationVC.dataFromPreviousView = sender as? [String: Any]
         }
     }
