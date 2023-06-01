@@ -7,4 +7,6 @@ Firebase Firestore for data persistence.
 
 Spoonacular API for recipe retrieval.
 
-MVP created for BCIT's COMP 3912 course. Will probably remake the whole thing using SwiftUI.
+MVP created for BCIT's COMP 3912 course.
+
+Video Demo: https://youtu.be/Ffa6zjpm5AE
